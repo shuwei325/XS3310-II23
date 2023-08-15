@@ -66,7 +66,7 @@ Estudiar
 </tr>
 <tr>
 <td ROWSPAN="2">
-1
+2
 </td>
 <td>
 22/08
@@ -75,7 +75,8 @@ Estudiar
 <a href="XS3310-II23_2.html">Clase02</a>
 </td>
 <td>
-Ejercicios
+Estudiar
+<a href="https://shuwei325.github.io/XS3310-I23/XS3310-I23_3.html">Clase03</a>
 </td>
 </tr>
 <tr>
@@ -86,8 +87,6 @@ Ejercicios
 <a href="XS3310-II23_3.html">Clase03</a>
 </td>
 <td>
-Estudiar
-<a href="https://shuwei325.github.io/XS3310-I23/XS3310-I23_3.html">Clase03</a>
 </td>
 </tr>
 </tr>
