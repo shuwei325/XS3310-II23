@@ -61,7 +61,8 @@ continua <a href="XS3310-II23_1.html">Clase01</a>
 </td>
 <td>
 Estudiar
-<a href="https://shuwei325.github.io/XS3310-I23/XS3310-I23_2.html">Clase02</a>  
+<a href="https://shuwei325.github.io/XS3310-I23/XS3310-I23_2.html">Clase02</a>
+</td>
 </tr>
 <tr>
 <td ROWSPAN="2">
