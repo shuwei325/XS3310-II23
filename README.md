@@ -18,6 +18,9 @@ está aquí: <http://lya.fciencias.unam.mx/lars/0398/index.html>
 
 <a href="Programa-XS3310.pdf">Programa del curso</a>
 
+<a href="https://shuwei325.github.io/XS3310-I23/">Materiales del ciclo
+I-2023</a>
+
 <table style="width:100%">
 <tr>
 <th width="20%">
@@ -47,7 +50,6 @@ Tarea
 <a href="XS3310-II23_1.html">Clase01</a>
 </td>
 <td>
-Estudiar <a href="XS3310-II23_2.html">Clase02</a>
 </td>
 </tr>
 <tr>
@@ -55,10 +57,36 @@ Estudiar <a href="XS3310-II23_2.html">Clase02</a>
 18/08
 </td>
 <td>
+continua <a href="XS3310-II23_1.html">Clase01</a>
+</td>
+<td>
+Estudiar
+<a href="https://shuwei325.github.io/XS3310-I23/XS3310-I23_2.html">Clase02</a>  
+</tr>
+<tr>
+<td ROWSPAN="2">
+1
+</td>
+<td>
+22/08
+</td>
+<td>
 <a href="XS3310-II23_2.html">Clase02</a>
 </td>
 <td>
 Ejercicios
+</td>
+</tr>
+<tr>
+<td>
+25/08
+</td>
+<td>
+<a href="XS3310-II23_3.html">Clase03</a>
+</td>
+<td>
+Estudiar
+<a href="https://shuwei325.github.io/XS3310-I23/XS3310-I23_3.html">Clase03</a>
 </td>
 </tr>
 </tr>
