@@ -39,126 +39,12 @@ class: center, middle, inverse, title-slide
 * Estimador cuadrático medio y propiedades de los estimadores: insesgado, eficiente, consistente y suficiente.
 
 
-
----
-## Ejercicios
-
-1. Suponga que `\(X_1, X_2, ..., X_n\)` es una muestra aleatoria exponencial con paramétro `\(\theta\)`. Se sabe que la esperanza es `\(1/\theta\)` y varianza `\(1/\theta ^2\)`. Encuentre una función `\(g(\theta)\)` de modo que la convergencia en distribución de `\(\overline{X}\)` no depende de `\(\theta\)`. 
-2. Se desea estimar la media `\(\mu\)` de una variable aleatoria `\(X\)`. Para ello se toman `\(10\)` datos y se calcula su media muestral `\(\bar{X}\)` y la varianza de dichos datos `\(\sigma^2_X\)`. Comente si son verdaderas o falsas las siguientes afirmaciones:
-
-      a) Por el teorema central del límite sabemos que `\(\mu\)` será una variable aleatoria normal.
-      
-      b) La media muestral con un conjunto de datos es un número y no una variable aleatoria.
-      
-      c) La media muestral `\(\bar{X}\)` tiene siempre una distribución muestral normal.
-      
-      d) Para disminuir la varianza de `\(\bar{X}\)` a la mitad habría que tomar al menos 100 datos.
-      
-      e) Como la media muestral es un estimador insesgado, tenemos asegurado que `\(\bar{X} = \mu\)`
-
-
-
 ---
 
 # Estimador Insesgado
 	
 &gt; **Definición 1.5.** Sea `\(X_{1}, X_{2}, ... , X_{n}\)` una muestra aleatoria tal que la distribución de probabilidad de `\(X_j\)`, `\(\forall j\)`, depende de un parámetro `\(\theta\)`; sea `\(\hat{\theta}\)` un estimador de `\(\theta\)`. Se dice que `\(\hat{\theta}\)` es un estimador insesgado de `\(\theta\)` si cumple que `\(E(\hat{ \theta })=\theta\)`. En el caso contrario se dice que es un estimador sesgado.
 
-
-**Ejemplo:**  
-
-Sea `\(X_{1}, X_{2}, ... , X_{n}\)` una muestra aleatoria sobre una población con media `\(\mu\)` y varianza `\(\sigma^2\)`, pruebe que `\(\overline{X}\)` y `\(S^2\)` son estimadores insesgados para estimar `\(\mu\)` y `\(\sigma^2\)` respectivamente.
-
-**Solución:** 
-
-`\(E\left(\overline{X}\right)=E\left(\frac{1}{n}\sum X_j\right)= \frac{1}{n}E\left(\sum X_j\right)= \frac{1}{n} \sum E\left(X_j\right)= \frac{1}{n} \cdot n\theta=\theta\)`, por lo que podemos concluir que `\(\overline{X}\)` es insesgado para estimar `\(\mu\)`, esto para cualquier tipo de población. 
----
-
-# Estimador Insesgado
-`$$\begin{eqnarray*}	
-E\left(S^2\right)&amp;=&amp; E\left[\frac{\sum{\left(X_{j}-\overline{X}\right)^2}}{n-1}\right]\\ &amp;=&amp; \frac{1}{n-1}E\left[\sum{\left[\left(X_{j}-\mu\right)-\left(\overline{X}-\mu\right)\right]^2}\right] \\ &amp;=&amp; \frac{1}{n-1}E\left[\sum{\left[\left(X_{j}-\mu\right)^{2}-2\left(X_{j}-\mu\right)\left(\overline{X}-\mu\right) + \left(\overline{X}-\mu\right)^{2} \right]}\right] \\ &amp;=&amp;\frac{1}{n-1}E\left[\sum{\left(X_{j}-\mu\right)^{2}}-2\left(\overline{X}-\mu\right)\sum{\left(X_{j}-\mu\right)} + \sum{\left(\overline{X}-\mu\right)^{2}}\right] \\ &amp;=&amp;\frac{1}{n-1}E\left[\sum{\left(X_{j}-\mu\right)^{2}}-2n\left(\overline{X}-\mu\right)^2 + n\left(\overline{X}-\mu\right)^{2}\right] \\ &amp;=&amp; \frac{1}{n-1}\left[\sum{E\left[\left(X_{j}-\mu\right)^{2}\right]}-nE\left[\left(\overline{X}-\mu\right)^2\right]\right] \\ &amp;=&amp; \frac{1}{n-1}\left(n\sigma^{2} - n\frac{\sigma^2}{n}\right)=\frac{1}{n-1}\left(n\sigma^{2} - \sigma^{2}\right)=\frac{\sigma^{2}\left(n-1\right)}{n-1}=\sigma^2
-\end{eqnarray*}$$`
----
-
-# Estimador Insesgado
-	
-**Ejemplo:** 
-
-Sea `\(X_{1}, X_{2}, ... , X_{n}\)` una muestra aleatoria tal que `\(X_{j} \sim Unif\left(0,\theta\right)\)`, con `\(\theta\)` desconocido. Un estimador de `\(\theta\)` es `\(\hat{\theta} = X_{\left(n\right)} = \max\left\{ X_{1}, X_{2}, ... , X_{n} \right\}\)`. Determine si `\(X_{\left(n\right)}\)` es insesgado. 
-	
-**Solución:** 
-
-Primero, encontramos la distribución de `\(\hat{\theta} = X_{\left(n\right)} = \max\left\{ X_{1}, X_{2}, ... , X_{n} \right\}\)`:
-
-`\begin{align*}
-F_{X_{\left(n\right)}}\left(x\right)  &amp;= P(X_{(n)} \leq x) \\ 
-&amp;= P(\max(X_1,X_2,⋯,X_n)\leq x) \\
-&amp;=P(X_1 \leq x,X_2 \leq x,⋯,X_n\leq x )
-\end{align*}`
-
-
-
-Si sabemos por la definición de muestra aleatoria que existe independencia, entonces: 
-
-`$$P(X_{(n)} \leq x)= \prod_{i=1}^n P(X_i\leq x) =\prod_{i=1}^n F_X( x) = [F_X( x)]^n$$`
-
----
-
-# Estimador Insesgado
-
-Ahora, también conocemos la función de densidad y distribución de una Uniforme `\(\left(0,\theta\right)\)`:
-	
-`\(f_{X}\left(x\right)=\begin{cases} \frac { 1 }{ \theta  } \quad si\quad 0&lt;x&lt;\theta  \\ 0\quad en\quad otros\quad casos \end{cases}\)`
-	
-`\(F_{X}\left(x\right)=\begin{cases} 0\quad si \quad x \leq 0 \\ \frac {x}{\theta} \quad si\quad 0&lt;x&lt;\theta  \\ 1\quad si\quad x \geq \theta \end{cases}\)`
-	
-Usando esta información podemos obtener la función de densidad del máximo y con ello su valor esperado.
-
-`$$f_{X_{(n)}}(x)= n[F_X(x)]^{n-1}f_X(x)$$`
-
-`$$f_{X_{(n)}}(x) = n\left[\frac{x}{\theta}\right]^{n-1} \cdot \frac {1}{\theta}=\begin{cases}\frac{nx^{n-1}}{\theta^n} \quad si \quad 0&lt;x&lt;\theta \\ 0 \quad en\quad otros\quad casos \end{cases}$$`
-	
-Esta es una distribución que estaremos usando mucho en el transcurso del curso;
-lleva el nombre de Potencial y en este caso tiene parámetros `\(n\)` y `\(\theta\)`.
-Podemos decir que `\(X_{\left(n\right)} \sim Potencial\left(n,\theta\right)\)`.
-
-
----
-
-# Estimador Insesgado
-
-De este resultado podemos obtener de una vez la función de distribución de una Potencial, es decir, `\(F_{X_{(n)}}(x)=[F_X(x)]^{n}\)`:
-
-
-`$$F_{X_{(n)}}(x) = \begin{cases} 0\quad si \quad x \leq 0 \\ \left(\frac{x}{\theta}\right)^{n} \quad si\quad 0&lt;x&lt;\theta \\ 1\quad si\quad x \geq \theta \end{cases}$$`
-
-Para poder determinar si `\(X_{\left(n\right)}\)` es insesgado debemos obtener su valor esperado. Esto lo tenemos que hacer por definición pues por el momento desconocemos del valor esperado de una Potencial.
-
-`\begin{multline*}
-E(X_{\left(n\right)}) = \int_{0}^{\theta}{xf_{X_{\left(n\right)}}\left(x\right)dx} = \int_{0}^{\theta}{x \cdot \frac{nx^{n-1}}{\theta^n}dx} = \int_{0}^{\theta}{\frac{nx^{n}}{\theta^n}dx} \\
-= \frac{n}{\theta^n}\int_{0}^{\theta}{x^{n}dx} = \frac{n}{\theta^n} \cdot \frac{x^{n+1}}{n+1}\Big|_{0}^{\theta} = \frac{n\theta}{n+1} \neq \theta
-\end{multline*}`
-
-
-
-Podemos concluir que  `\(X_{\left(n\right)}\)` no es un estimador insesgado para `\(\theta\)`. 
-
----
-
-
-**NOTA #2:** Del resultado de esta integral encontramos que el valor esperado de una Potencial con parámetros `\(\alpha\)` y `\(\beta\)` sería `\(\frac{\alpha \beta}{\alpha + 1}\)`. 
-
----
-
-# Estimador Insesgado
-	
-Se puede construir un estimador insesgado de `\(\theta\)` a partir de `\(X_{\left(n\right)}\)`, de modo que `\(E(\hat{\theta}^{*}) = \theta\)`
-	
-Podemos observar que en este caso nuestro estimador insesgado sería `\(\hat{\theta}^{*}=\frac{\left(n+1\right)X_{\left(n\right)}}{n}\)` ya que si calculamos su valor esperado obtendriamos lo siguiente: 
-
-
-`\(\displaystyle E(\hat{\theta}^{*}) = E\left[\frac{\left(n+1\right)X_{\left(n\right)}}{n}\right] = \frac{n+1}{n}E(X_{\left(n\right)}) = \frac{n+1}{n} \cdot \frac{n\theta}{n+1} = \theta\)`
-	
 ---
 
 # Estimador Insesgado
@@ -227,13 +113,7 @@ Sin embargo, si `\(E(\hat{\theta}) \neq \theta\)` se dice que hay un SESGO en la
 
 **Solución:**
 	
-a. Sabemos que `\(E(X_{\left(n\right)}) = \frac{n\theta}{n+1}\)`, por lo que tenemos 
-
-`$$B(\hat{\theta}) = E(X_{\left(n\right)}) - \theta = \frac{n\theta}{n+1} - \theta = \frac{-\theta}{n+1}$$`
-		
-Podemos notar como el sesgo es *negativo*. Esto significa que `\(X_{\left(n\right)}\)` está sub-estimando el valor real de `\(\theta\)`, lo cual es de esperar con el máximo muestral.
-		
-b. En este caso obtuvimos que `\(E(X_{\left(1\right)}) = \frac{2n\beta}{2n-1}\)`, por lo tanto 
+En este caso obtuvimos que `\(E(X_{\left(1\right)}) = \frac{2n\beta}{2n-1}\)`, por lo tanto 
 		
 `$$B(X_{\left(1\right)}) = E(X_{\left(1\right)}) - \beta = \frac{2n\beta}{2n-1} - \beta = \frac{\beta}{2n-1}$$`
 		
@@ -249,38 +129,12 @@ En este caso el sesgo es *positivo*, indicando que el estimador está sobre-esti
 	
 **Solución:** 
 	
-a. `\(\displaystyle\lim_{n \to +\infty}{B(X_{\left(n\right)})} = \lim_{n \to +\infty}{\frac{-\theta}{n+1}} = 0\)`
+`$$\displaystyle\lim_{n \to +\infty}{B(X_{\left(1\right)})} = \lim_{n \to +\infty}{\frac{\beta}{2n-1}} = 0$$`
 
-b. `\(\displaystyle\lim_{n \to +\infty}{B(X_{\left(1\right)})} = \lim_{n \to +\infty}{\frac{\beta}{2n-1}} = 0\)`
-
-Se cumple que ambos estimadores son asintóticamente insesgados para sus respectivos parámetros.
+Por lo tanto, es asintóticamente insesgado para `\(\theta\)`.
 	
 **NOTA:** También se cumple que un estimador `\(\hat{\theta}\)` es asintóticamente insesgado para `\(\theta\)` si `\(\displaystyle\lim_{n\rightarrow\infty}{E(\hat{\theta})} = \theta\)`.
 	
-
----
-
-# Sesgo
-
-Ejemplo: En las siguientes dos figuras muestran `\(n = 100\)` puntos muestrales para una población infinita con `\(N(\mu = 1,\sigma^2=1)\)`, con la densidad en en rojo, pero con:
-
-.pull-left[
-- la media muestral estimada con `\(\bar{X}=1.1176\)`
-]
-
-.pull-right[
-- la log media estimada `\(log(\bar{X})=0.145\)`
-- `\(log(\mu)=0\)`
-]
-
-
-&lt;img src="XS3310-II23_3_files/figure-html/unnamed-chunk-1-1.png" width="100%" /&gt;
-
----
-
-# Sesgo asintótico
-
-&lt;img src="XS3310-II23_3_files/figure-html/unnamed-chunk-2-1.png" width="100%" /&gt;
 ---
 
 # Error Cuadrático Medio (ECM)
@@ -492,10 +346,6 @@ Práctica en grupos.
 
 Próxima clase: consistente y suficiente. 
 
-
-Slides creadas via R package [**xaringan**](https://github.com/yihui/xaringan).
-
-El chakra viene de [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
