@@ -74,15 +74,13 @@ El procedimiento que sigue consiste en *contrastar* estas hipótesis mediante un
 # Regiones de rechazo y tipos de errores
 
 
-Error Tipo I y Error Tipo II
-
 |		             | `\(H_0\)` cierto  |  `\(H_0\)` falso   |
 |:-------------- |:-------------:|:--------------:|
 |	Aceptar `\(H_0\)`  | Acierto       |  Error Tipo II |
 |	Rechazar `\(H_0\)` | Error Tipo I  |  Acierto       |
 
 	
-&gt;Definición. Probabilidad de Error Tipo I y Error Tipo II: Para un espacio paramétrico `\(\Omega\)`, dividido en dos subconjuntos `\(\Omega_0\)` y `\(\Omega_1\)`, de un parámetro `\(\theta\)`, se define la probabilidad de cometer Error Tipo I, denotada como `\(\alpha(\delta)\)` como: 
+&gt;Definición. **Probabilidad de Error Tipo I y Error Tipo II**: Para un espacio paramétrico `\(\Omega\)`, dividido en dos subconjuntos `\(\Omega_0\)` y `\(\Omega_1\)`, de un parámetro `\(\theta\)`, se define la probabilidad de cometer Error Tipo I, denotada como `\(\alpha(\delta)\)` como: 
 
 `$$\alpha(\delta) = P(\text{rechazar } H_{0} \text{ cuando es cierta}) = P\left( \textbf{X} \in RC_{\delta} | \theta \in \Omega_0 \right) = Potencia\left(\theta | \theta \in \Omega_0 \right)$$`
 
@@ -97,8 +95,9 @@ Error Tipo I y Error Tipo II
 	
 Dos características que tienen los contrastes: la potencia y el tamaño. El enfoque está en encontrar un "buen" contraste según estas características.  A continuación se define la potencia de la prueba: 
 	
-&gt; Definición. Función potencia: Sea `\(X_{1}, X_{2}, ... , X_{n}\)` una muestra aleatoria de una población con parámetro desconocido `\(\theta\)` y sea `\(RC_{\delta}\)` la región crítica de un contraste `\(\delta\)` respecto a `\(\theta\)`. La **potencia del contraste**, denotada `\(Potencia(\theta)\)`, es la probabilidad que el contraste indique rechazar `\(H_{0}\)` para un valor dado de `\(\theta\)` es decir, 
+&gt; Definición. **Función potencia**: Sea `\(X_{1}, X_{2}, ... , X_{n}\)` una muestra aleatoria de una población con parámetro desconocido `\(\theta\)` y sea `\(RC_{\delta}\)` la región crítica de un contraste `\(\delta\)` respecto a `\(\theta\)`. La **potencia del contraste**, denotada `\(Potencia(\theta)\)`, es la probabilidad que el contraste indique rechazar `\(H_{0}\)` para un valor dado de `\(\theta\)` es decir, 
 `\(Potencia(\theta) = P(\textbf{X} \in RC | \theta)\)`
+
 
 ---
 
@@ -119,10 +118,9 @@ En el ejemplo anterior podemos observar que solo tenemos un valor para la probab
 	
 Por pura coincidencia ambos errores tienen la misma probabilidad en el ejemplo anterior. A continuación veremos otra forma de describir un contraste.
 	
-&gt; Definición. Tamaño del contraste. Para un contraste de hipótesis `\(H_{0}: \theta \in \Omega_{0}\)` y `\(H_{1}: \theta \in \Omega_{1}\)` se denomina tamaño del contraste al valor `\(\alpha_c\)` dado por:
 
-`$$\alpha_c = Sup(Potencia(\theta|\theta \in \Omega_{0})) = Sup(\alpha(\delta))$$`
-
+&gt; Definición. **Tamaño del contraste**. Para un contraste de hipótesis `\(H_{0}: \theta \in \Omega_{0}\)` y `\(H_{1}: \theta \in \Omega_{1}\)` se denomina tamaño del contraste al valor `\(\alpha_c\)` dado por:
+&gt; `$$\alpha_c = \sup_{\theta \in \Omega_0} Potencia(\theta|\delta) = \sup_{\theta \in \Omega_0} \alpha(\delta),$$`
 &gt;	Es decir, el tamaño de un contraste es la máxima probabilidad de cometer un Error Tipo I.
 
 ---
@@ -169,7 +167,7 @@ Otro punto importante de destacar es que en la práctica usualmente utilizamos l
 
 El Valor p es una herramienta que se puede utilizar para contrastar hipótesis que tiene características que pueden solucionar algunos problemas con los contrastes anteriores. Por ejemplo, no todos los contrastes van a tener un tamaño de contraste exacto (como en los casos donde las variables aleatorias son discretas.) Por otro lado, ni el tamaño ni la potencia están directamente relacionados con los datos observados. El valor p corrige estos problemas. Para propósitos del curso definiremos el valor p como:
 
-&gt; Definición. Valor p. Sea `\(T = T(X_1, X_2, \dots, X_n)\)` un estadístico y considere `\(H_0: \theta = \theta_0\)` contra `\(H_1: \theta &lt; \theta_0\)` (o `\(H_1: \theta &gt; \theta_0\)`). Suponga que el contraste rechaza `\(H_0\)` si `\(T \leq k\)` (o `\(T &gt; k\)`). Sea `\(t = T(x_1, x_2, \dots, x_n\)`) un valor observado de T. Entonces se define el valor p (denotado pval(t)) como:
+&gt; Definición. **Valor p**. Sea `\(T = T(X_1, X_2, \dots, X_n)\)` un estadístico y considere `\(H_0: \theta = \theta_0\)` contra `\(H_1: \theta &lt; \theta_0\)` (o `\(H_1: \theta &gt; \theta_0\)`). Suponga que el contraste rechaza `\(H_0\)` si `\(T \leq k\)` (o `\(T &gt; k\)`). Sea `\(t = T(x_1, x_2, \dots, x_n\)`) un valor observado de T. Entonces se define el valor p (denotado pval(t)) como:
 `$$pval(t) = P(T \leq t|\theta = \theta_0)$$` o 
 `$$pval(t) = P(T &gt; t|\theta = \theta_0)$$`
 
